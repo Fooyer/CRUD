@@ -1,0 +1,34 @@
+
+MYSQL MENU:
+CREATE DATABASE cedupcadastro;
+
+
+DENTRO DO DATABASE cedupcadastro:
+CREATE TABLE C_Alunos (
+    A_ID int PRIMARY KEY AUTO_INCREMENT,
+    A_Nome varchar(70),
+    A_Email varchar(100),
+    A_Idade int,
+    A_Telefone varchar(14),
+    A_Endereco varchar(150),
+    A_MateriasCursadas varchar(200));
+CREATE TABLE C_Diretor (
+    D_ID int PRIMARY KEY AUTO_INCREMENT,
+    D_Nome varchar(70),
+    D_Email varchar(150),
+    D_Telefone varchar(14),
+    D_Endereco varchar(150));
+CREATE TABLE C_Secretarias (
+    S_ID int PRIMARY KEY AUTO_INCREMENT,
+    S_Nome varchar(70),
+    S_Email varchar(150),
+    S_Telefone varchar(14),
+    S_Endereco varchar(150));
+CREATE TABLE C_Professores (
+    P_ID int PRIMARY KEY AUTO_INCREMENT,
+    P_Nome varchar(70),
+    P_Email varchar(150),
+    P_Endereco varchar(150),
+    P_MateriasMinistradas varchar(150),
+    P_Telefone varchar(14),
+    P_Biografia varchar(200));
