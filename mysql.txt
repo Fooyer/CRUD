@@ -1,9 +1,9 @@
 
 MYSQL MENU:
-CREATE DATABASE cedupcadastro;
+CREATE DATABASE basecadastro;
 
 
-DENTRO DO DATABASE cedupcadastro:
+DENTRO DO DATABASE basecadastro:
 CREATE TABLE C_Alunos (
     A_ID int PRIMARY KEY AUTO_INCREMENT,
     A_Nome varchar(70),
