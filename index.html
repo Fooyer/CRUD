@@ -1,0 +1,119 @@
+<?php
+    $diretores = $this->listD();
+    $alunos = $this->listA();
+    $secretarias = $this->listS();
+    $professores = $this->listP();
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <section class="aluno">
+        <table>
+            <thead>
+                <th>Alunos</th>
+            </thead>
+            <tbody>
+                <?php if($alunos) { ?>
+                    <?php foreach($alunos as $aluno) { ?>
+                        <tr>
+                            <td><?php echo $aluno['A_Nome']?></td>
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+    <section class="diretor">
+        <table>
+            <thead>
+                <th>Diretores</th>
+            </thead>
+            <tbody>
+                <?php if($diretores) { ?>
+                    <?php foreach($diretores as $diretor) { ?>
+                        <tr>
+                            <td><?php echo $diretor['D_Nome']?></td>
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+    <section class="professor">
+        <table>
+            <thead>
+                <th>Professores</th>
+            </thead>
+            <tbody>
+                <?php if($professores) { ?>
+                    <?php foreach($professores as $professor) { ?>
+                        <tr>
+                            <td><?php echo $professor['P_Nome']?></td>
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+    <section class="secretaria">
+        <table>
+            <thead>
+                <th>Secretárias</th>
+            </thead>
+            <tbody>
+                <?php if($secretarias) { ?>
+                    <?php foreach($secretarias as $secretaria) { ?>
+                        <tr>
+                            <td><?php echo $secretaria['S_Nome']?></td>
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+    <container class="container">
+        <a href="index.php">
+            <div id="mn">
+                <p>Home</p>
+                <img src="img/MenuIcon.png">
+            </div>
+        </a>
+        <hr id="linha">
+        <a href="alunos/index.php">
+            <div class="al">
+                <p>Alunos</p>
+                <img src="img/alunoi.png">
+            </div>
+        </a>
+        <a href="professores/index.php">
+            <div class="al">
+                <p>Professores</p>
+                <img src="img/profi.png" alt="">
+            </div>
+        </a>
+        <a href="diretor/index.php">
+            <div class="dr">
+                <p>Diretores</p>
+                <img src="img/diretori.png" alt="">
+            </div>
+        </a>
+        <a href="secretarias/index.php">
+            <div class="al">
+                <p>Secretárias</p>
+                <img src="img/secretariai.png" alt="">
+            </div>
+        </a>
+        <hr id="linha2">
+        <a href="mailto:xneerd157@gmail.com" class="aoba">
+            <p id="copy">Freddy Albert Baier©</p>
+            <img src="img/copy.png" alt="">
+        </a>
+    </container>
+</body>
+</html>
